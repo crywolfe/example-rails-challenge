@@ -11,6 +11,7 @@ customer_2 = Customer.create("Raj", "Jamnis")
 customer_3 = Customer.create("Andrew", "Chung")
 customer_4 = Customer.create("Mike", "Smith")
 
+
 # 10 Should be successful transactions:
 #   - 5 Should be linked to Customer 1
 #   - 3 Should be linked to Customer 2
