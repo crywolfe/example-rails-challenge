@@ -1,7 +1,7 @@
 class CreateCharges < ActiveRecord::Migration
   def change
     create_table :charges do |t|
-      t.integer :created
+      t.timestamp :created
       t.boolean :paid
       t.float :amount
       t.string :currency

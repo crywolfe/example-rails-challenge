@@ -34,8 +34,8 @@ transaction_5_5 = Charge.create(created: 1234567855, paid: false, amount: 1055, 
 # 5 should be disputed:
 #   - 3 should be linked to Customer 1
 #   - 2 should be linked to customer 2
-transaction_1_5a = Charge.create(created: 1234567861, paid: false, amount: 1061, currency: "usd", refunded: false, customer_id: 1)
-transaction_2_5a = Charge.create(created: 1234567862, paid: false, amount: 1062, currency: "usd", refunded: false, customer_id: 1)
-transaction_3_5a = Charge.create(created: 1234567863, paid: false, amount: 1063, currency: "usd", refunded: false, customer_id: 1)
-transaction_4_5a = Charge.create(created: 1234567864, paid: false, amount: 1064, currency: "usd", refunded: false, customer_id: 2)
-transaction_5_5a = Charge.create(created: 1234567865, paid: false, amount: 1065, currency: "usd", refunded: false, customer_id: 2)
+transaction_1_5a = Charge.create(created: 1234567861, paid: true, amount: 1061, currency: "usd", refunded: true, customer_id: 1)
+transaction_2_5a = Charge.create(created: 1234567862, paid: true, amount: 1062, currency: "usd", refunded: true, customer_id: 1)
+transaction_3_5a = Charge.create(created: 1234567863, paid: true, amount: 1063, currency: "usd", refunded: true, customer_id: 1)
+transaction_4_5a = Charge.create(created: 1234567864, paid: true, amount: 1064, currency: "usd", refunded: true, customer_id: 2)
+transaction_5_5a = Charge.create(created: 1234567865, paid: true, amount: 1065, currency: "usd", refunded: true, customer_id: 2)
