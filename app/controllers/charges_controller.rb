@@ -6,6 +6,10 @@ class ChargesController < ApplicationController
   def index
     @charges = Charge.all
     @customers = Customer.all
+    @failed_array = Charge.failed_charges(@charges)
+    @successful_array = Charge.successful_charges(@charges)
+    @disputed_array = Charge.disputed_charges(@charges)
+    binding.pry
   end
 
   # GET /charges/1

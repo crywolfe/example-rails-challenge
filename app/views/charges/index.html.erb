@@ -13,14 +13,12 @@
   </thead>
 
   <tbody>
-    <% @charges.each do |charge| %>
-    <% if charge.paid == false %>
+    <% @failed_array.each do |charge| %>
       <tr class="failed">
         <td><%= @customers.find(charge.customer_id).first_name %> <%= @customers.find(charge.customer_id).last_name %></td>
         <td><%= number_to_currency(charge.amount) %></td>
-        <td><%= charge.created %></td>
+        <td><%= charge.created.to_date %></td>
       </tr>
-      <% end %>
     <% end %>
   </tbody>
 </table>
@@ -37,14 +35,12 @@
   </thead>
 
   <tbody>
-    <% @charges.each do |charge| %>
-    <% if charge.paid == true && charge.refunded == true %>
+    <% @disputed_array.each do |charge| %>
       <tr class="disputed">
         <td><%= @customers.find(charge.customer_id).first_name %> <%= @customers.find(charge.customer_id).last_name %></td>
         <td><%= charge.amount %></td>
-        <td><%= charge.created %></td>
+        <td><%= charge.created.to_date %></td>
       </tr>
-      <% end %>
     <% end %>
   </tbody>
 </table>
@@ -60,16 +56,12 @@
   </thead>
 
   <tbody>
-    <% @charges.each do |charge| %>
-    <% if charge.paid == true && charge.refunded == false %>
+    <% @successful_array.each do |charge| %>
       <tr>
         <td><%= charge.amount %></td>
       </tr>
-      <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Charge', new_charge_path %>
