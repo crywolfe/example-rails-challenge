@@ -47,4 +47,5 @@ group :development, :test do
   gem "rails-erd"
   gem "awesome_print"
   gem 'rails-footnotes', '>= 4.0.0', '<5'
+  gem "capybara"
 end
