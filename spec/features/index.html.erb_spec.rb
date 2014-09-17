@@ -13,7 +13,8 @@ describe "charges/index.html.erb" do
     end
     it "should find Failed" do
       visit '/charges/index'
-      expect(page).to assert_text("FAILED")
+      page.find('h1', :text => 'FAILED')
+      # expect(page).to assert_text("FAILED")
     end
 
   end
